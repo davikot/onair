@@ -1,0 +1,26 @@
+@function content-padding($w) {
+  @return max(18px, calc((#{$w} - 1024px) / 2));
+}
+
+:root {
+  --border: #eee;
+  --progress: #eee;
+  --progress-fill: black;
+  --muted: #aaa;
+  --bg: white;
+  --link: royalblue;
+}
+
+html,
+body {
+  margin: 0;
+
+  font-family: Inter, sans-serif;
+
+  background-color: var(--bg);
+}
+
+.content-padding {
+  padding-left: content-padding(100%);
+  padding-right: content-padding(100%);
+}
