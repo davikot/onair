@@ -17,7 +17,7 @@ const API_URL = "https://onair.radioapi.io/thisisgo/go/onair.json";
 
 export const useRadioStore = defineStore("radio", () => {
   const items: Ref<Item[]> = ref([]);
-  const intervalId: Ref<undefined | number> = ref(undefined);
+  const intervalId: Ref = ref(undefined);
 
   const playingItems = computed(() =>
     items.value.filter((item) => item.status === "playing")
